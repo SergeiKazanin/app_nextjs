@@ -1,0 +1,40 @@
+/* @font-face {
+  font-family: "Intro Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(""), url("../fontsWhoosh/Intro-Bold.woff") format("woff"),
+    url("../fontsWhoosh/Intro-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Intro Book Italic";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""), url("../fontsWhoosh/Intro-Book-Italic.woff") format("woff"),
+    url("../fontsWhoosh/Intro-Book-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Intro Book";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""), url("../fontsWhoosh/Intro-Book.woff") format("woff"),
+    url("../fontsWhoosh/Intro-Book.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Intro Light";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""), url("../fontsWhoosh/Intro-Light.woff") format("woff"),
+    url("../fontsWhoosh/Intro-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Intro Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""), url("../fontsWhoosh/Intro-Regular.woff") format("woff"),
+    url("../fontsWhoosh/Intro-Regular.ttf") format("truetype");
+} */
