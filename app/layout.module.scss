@@ -1,4 +1,19 @@
 .layout {
   display: flex;
   justify-content: center;
+  flex: 1 1 auto;
+}
+
+.body {
+  background: linear-gradient(
+    180deg,
+    #24252f 0%,
+    #31313f 36.46%,
+    #2f303d 44.58%,
+    #242530 100%
+  );
+  color: var(--text-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
