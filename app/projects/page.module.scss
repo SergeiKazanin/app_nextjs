@@ -1,0 +1,42 @@
+.projects {
+  &__container {
+    width: var(--width-container);
+    height: 100%;
+    margin: 0 auto;
+    text-align: start;
+  }
+  &__navElem {
+    margin-top: 80px;
+  }
+  &__linkMain {
+    color: #c4d2e3;
+    font-family: Rubik;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: -2px;
+      width: 0;
+      height: 1.5px;
+      background-color: #c4d2e3;
+      content: "";
+      transition: 0.3s ease-out;
+    }
+    &:hover:after {
+      width: 100%;
+    }
+  }
+  &__textHead {
+    color: #616580;
+    font-family: Rubik;
+    font-size: 18px;
+  }
+  &__HeaderPage {
+    color: var(--text-color);
+    font-family: RubikMedium;
+    font-size: 38px;
+    margin-top: 78px;
+  }
+}

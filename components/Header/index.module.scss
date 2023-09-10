@@ -27,8 +27,9 @@
       display: block;
       position: absolute;
       left: 50%;
+      bottom: -5px;
       width: 0;
-      height: 1.2px;
+      height: 1.5px;
       background-color: var(--hover-color);
       content: "";
       transition: 0.3s ease-out;
