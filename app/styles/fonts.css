@@ -43,3 +43,12 @@
   src: local(""),
     url("../../components/fonts/Rubik-Light.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  line-height: normal;
+  src: local(""),
+    url("../../components/fonts/Rubik-Regular.ttf") format("truetype");
+}
