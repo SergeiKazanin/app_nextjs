@@ -2,7 +2,9 @@ import React from "react";
 import style from "./index.module.scss";
 
 import Logo from "./images/logo.svg";
+
 import Link from "next/link";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export const Header = () => {
   return (
@@ -38,6 +40,7 @@ export const Header = () => {
             </Link>
           </li>
         </ul>
+        <ThemeSwitcher />
       </div>
     </header>
   );
