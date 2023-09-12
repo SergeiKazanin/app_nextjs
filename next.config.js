@@ -7,6 +7,16 @@ const nextConfig = {
     });
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "backend.cyberia.studio",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

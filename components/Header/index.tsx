@@ -1,14 +1,17 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import style from "./index.module.scss";
 
 import Logo from "./images/logo.svg";
 
 import Link from "next/link";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import cl from "classnames";
 
 export const Header = () => {
+  const [first, setfirst] = useState();
   return (
-    <header className={style.header}>
+    <header className={cl(style.header, style.header__scrollUp)}>
       <div className={style.header__container}>
         <Link href={"/"}>
           <Logo className={style.header__logo} />

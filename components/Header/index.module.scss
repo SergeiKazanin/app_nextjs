@@ -1,5 +1,21 @@
 .header {
-  height: 100px;
+  height: 110px;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateY(0);
+  transition: height 0.2s, transform 0.2s, background-color 0.2s;
+  z-index: 30;
+
+  &__scrollDown {
+    transform: translateY(-130px);
+  }
+  &__scrollUp {
+    background-color: #252631;
+    position: fixed;
+    transform: translateY(0);
+  }
 
   &__container {
     width: var(--width-container);
@@ -34,7 +50,7 @@
       content: "";
       transition: 0.3s ease-out;
     }
-    &:hover:after {
+    &:hover::after {
       left: 0;
       width: 100%;
     }

@@ -1,0 +1,27 @@
+.filterButtons {
+  width: 100%;
+  height: auto;
+  margin-top: 84px;
+  &__ul {
+    display: flex;
+    gap: 30px;
+  }
+  &__button {
+    cursor: pointer;
+    border-radius: 7px;
+    background: #2b2d3a;
+    border: 0;
+    box-shadow: 0px 14px 61px 0px rgba(23, 27, 44, 0.75);
+    color: var(--text-color);
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 10px 29px 10px 29px;
+    &:hover {
+      background: var(--text-color);
+      color: #303958;
+    }
+  }
+}

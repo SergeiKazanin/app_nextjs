@@ -24,7 +24,7 @@
       content: "";
       transition: 0.3s ease-out;
     }
-    &:hover:after {
+    &:hover::after {
       width: 100%;
     }
   }
