@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./index.module.scss";
 
 import Logo from "./images/logo.svg";
@@ -9,9 +9,31 @@ import { ThemeSwitcher } from "./ThemeSwitcher";
 import cl from "classnames";
 
 export const Header = () => {
-  const [first, setfirst] = useState();
+  const [scroll, setScroll] = useState(0);
+  const [scrollPos, setScrollPoss] = useState("");
+
+  const handleScroll = () => {
+    setScroll(window.scrollY);
+  };
+  const prevScroll = useRef<number>(0);
+
+  useEffect(() => {
+    const prev = prevScroll.current;
+    if (scroll < prev) {
+      setScrollPoss(style.header__scrollUp);
+    } else if (scroll > prev) {
+      setScrollPoss(style.header__scrollDown);
+    }
+    prevScroll.current = scroll;
+  }, [scroll]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className={cl(style.header, style.header__scrollUp)}>
+    <header className={cl(style.header, scrollPos)}>
       <div className={style.header__container}>
         <Link href={"/"}>
           <Logo className={style.header__logo} />
