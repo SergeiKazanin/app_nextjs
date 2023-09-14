@@ -2,6 +2,7 @@ import "./styles/vars.css";
 import "./styles/reset.css";
 import "./styles/index.css";
 import "./styles/fonts.css";
+
 import style from "./layout.module.scss";
 import type { Metadata } from "next";
 

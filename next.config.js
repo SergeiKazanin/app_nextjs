@@ -17,6 +17,9 @@ const nextConfig = {
       },
     ],
   },
+  sassOptions: {
+    additionalData: `@import "/app/styles/mixins.scss";`,
+  },
 };
 
 module.exports = nextConfig;
