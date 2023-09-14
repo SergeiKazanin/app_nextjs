@@ -174,6 +174,9 @@ export const Feedback = () => {
               <Cancel
                 onClick={() => {
                   formik.setFieldValue("attachment", {});
+                  if (inputRef.current) {
+                    inputRef.current.value = "";
+                  }
                 }}
                 className={style.feedback__cancelSvg}
               />
@@ -193,7 +196,7 @@ export const Feedback = () => {
               Нажимая “Отправить”, Вы даете согласие на обработку персональных
               данных
             </span>
-          </div>{" "}
+          </div>
           <div className={cl(style.feedback__feedOk, showOkFeed)}>
             Ваша заявка успешно отправлена
           </div>
