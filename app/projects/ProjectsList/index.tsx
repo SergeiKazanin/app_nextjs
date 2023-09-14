@@ -1,5 +1,5 @@
 "use client";
-import { getAllProjects } from "@/service/getProgect";
+import { getAllProjects } from "@/service/api";
 import style from "./index.module.scss";
 import useSWR from "swr";
 import { Projects } from "@/models/models";

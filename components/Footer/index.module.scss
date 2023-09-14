@@ -49,9 +49,9 @@
     display: flex;
     gap: 70px;
     text-align: start;
-    :first-child {
-      align-items: flex-end;
-    }
+    // :first-child {
+    //   align-items: flex-end;
+    // }
   }
   &__copyright {
     width: 359px;

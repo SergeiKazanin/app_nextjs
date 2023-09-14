@@ -1,0 +1,225 @@
+.feedback {
+  width: 100%;
+  height: 641px;
+  background-color: #252631;
+  &__container {
+    width: var(--width-container);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 100px;
+  }
+  &__textGrup {
+    display: flex;
+    flex-direction: column;
+    max-width: 455px;
+  }
+  &__textHeader {
+    color: var(--text-color);
+    font-family: RubikMedium;
+    font-size: 38px;
+    text-align: start;
+    margin-top: 25px;
+  }
+  &__text {
+    font-family: Open Sans;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: start;
+    margin-top: 35px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 400px;
+    width: 20vw;
+    z-index: 10;
+  }
+  &__formError {
+    color: #e83b3b;
+    font-family: Open Sans;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 8px;
+  }
+  &__input {
+    position: relative;
+    width: 100%;
+    height: 100px;
+  }
+  &__inputControl {
+    border: 1px solid #9aa8ba;
+    border-radius: 8px;
+    outline: none;
+    padding: 15px 0 15px 10px;
+    transition: border-color 0.2s;
+    background-color: transparent;
+    line-height: 22px;
+    font-family: Open Sans;
+    font-size: 16px;
+    color: var(--text-color);
+    width: calc(100% - 10px);
+    &:focus + .feedback__label {
+      top: -8px;
+      background-color: #252631;
+    }
+  }
+  &__inputControlError {
+    border: 1px solid #e83b3b;
+  }
+  &__inputOnText {
+    top: -8px !important;
+    background-color: #252631;
+  }
+
+  &__label {
+    align-items: center;
+    border-radius: 10px;
+    column-gap: 3px;
+    display: flex;
+    left: 10px;
+    padding: 0 10px;
+    pointer-events: none;
+    position: absolute;
+    top: 17px;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+    font-family: Open Sans;
+    font-size: 16px;
+  }
+  &__labelError {
+    color: #e83b3b;
+  }
+  &__inputText {
+    border: 1px solid #9aa8ba;
+    border-radius: 8px;
+    margin: 0 0 30px;
+    min-height: 185px;
+    position: relative;
+    width: 100%;
+    text-align: start;
+  }
+  &__inputControlText {
+    color: var(--text-color);
+    background-color: transparent;
+    border: none;
+    border-radius: inherit;
+    font-family: Open Sans;
+    font-size: 16px;
+    height: 70px !important;
+    line-height: 22px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    max-height: 150px;
+    outline: none;
+    padding: 10px 0 20px 20px;
+    resize: none;
+    width: calc(100% - 40px) !important;
+    &:focus + .feedback__label {
+      top: -8px;
+      background-color: #252631;
+    }
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #eef3ff;
+      border-radius: 50px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #9aa8ba;
+      border: none;
+      border-radius: 50px;
+    }
+  }
+  &__submit {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  &__button {
+    background-color: #2d76f9;
+    border-radius: 35px;
+    border: none;
+    color: #fff;
+    font-family: Open Sans;
+    padding: 20px 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    &:hover {
+      background-color: #0359f3;
+    }
+  }
+  &__desc {
+    color: var(--text-color);
+    font-family: Open Sans;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: start;
+  }
+  &__file {
+    display: none;
+  }
+  &__paperSvg {
+    bottom: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+  }
+  &__filesDiv {
+    background-color: #9aa8ba;
+    align-items: center;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    min-width: 200px;
+    padding: 8px 12px;
+    margin: 0 0 20px 20px;
+    display: none;
+  }
+  &__fileOn {
+    display: flex;
+  }
+  &__fileName {
+    color: #292b35;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Open Sans;
+    font-size: 16px;
+    height: 100%;
+  }
+  &__fileSize {
+    color: var(--text-color);
+    font-family: Open Sans;
+    font-size: 16px;
+  }
+  &__cancelSvg {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+  }
+  &__feedOk {
+    color: #8fd97d;
+    font-family: Open Sans;
+    font-size: 18px;
+    line-height: 22px;
+    display: none;
+  }
+  &__feedNot {
+    color: #e83b3b;
+    font-family: Open Sans;
+    font-size: 18px;
+    line-height: 22px;
+    display: none;
+  }
+  &__feedShow {
+    display: block;
+    margin-top: 20px;
+  }
+}

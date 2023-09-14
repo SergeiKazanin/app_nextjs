@@ -23,3 +23,10 @@ export interface Category {
   id: number;
   name: string;
 }
+
+export interface Values {
+  email: string;
+  phone: string;
+  message: string;
+  attachment?: File;
+}

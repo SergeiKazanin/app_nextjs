@@ -2,7 +2,6 @@ import Link from "next/link";
 import style from "./page.module.scss";
 import { FilterButtons } from "./FilterButtons";
 import ProjectsList from "./ProjectsList";
-import { Feedback } from "./Feedback";
 
 export default function Projects() {
   return (

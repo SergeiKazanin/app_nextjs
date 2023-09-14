@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { Feedback } from "@/components/Feedback";
 
 export const metadata: Metadata = {
   title: "Cyberia",
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={style.body}>
         <Header />
         <main className={style.layout}>{children}</main>
+        <Feedback />
         <Footer />
       </body>
     </html>
