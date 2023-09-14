@@ -14,6 +14,9 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         }}
         className={style.projectCard}
       >
+        <span className={style.projectCard__description}>
+          {project.categories.map((cat) => cat.name)}
+        </span>
         <Group className={style.projectCard__svg} />
         <span className={style.projectCard__title}>{project.title}</span>
         <span className={style.projectCard__description}>

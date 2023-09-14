@@ -9,6 +9,15 @@ export const getAllProjects = async () => {
 
   return response.json();
 };
+export const getCategories = async () => {
+  const response = await fetch(
+    "https://backend.cyberia.studio/api/v1/project-categories"
+  );
+
+  if (!response.ok) throw new Error("Unable to fetch posts.");
+
+  return response.json();
+};
 
 export const sendFeedback = async (feedback: FormData) => {
   const response = await fetch(

@@ -23,5 +23,13 @@
       background: var(--text-color);
       color: #303958;
     }
+    transition: background-color 0.3s, color 0.3s;
+  }
+  &__buttonActive {
+    background-color: #2d76f9;
+    &:hover {
+      background: #2d76f9;
+      color: #303958;
+    }
   }
 }

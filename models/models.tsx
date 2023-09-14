@@ -30,3 +30,7 @@ export interface Values {
   message: string;
   attachment?: File;
 }
+
+export interface CategoriesSearch {
+  items: Category[];
+}
