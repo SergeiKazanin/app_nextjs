@@ -2,6 +2,9 @@
   width: 100%;
   height: 641px;
   background-color: #252631;
+  @include small-laptop {
+    height: fit-content;
+  }
   &__container {
     width: var(--width-container);
     height: 100%;
@@ -10,11 +13,21 @@
     justify-content: space-between;
     align-items: center;
     column-gap: 100px;
+    @include small-laptop {
+      width: 90vw;
+      flex-direction: column;
+      gap: 25px;
+      margin-top: 58px;
+      margin-bottom: 100px;
+    }
   }
   &__textGrup {
     display: flex;
     flex-direction: column;
     max-width: 455px;
+    @include small-laptop {
+      max-width: 596px;
+    }
   }
   &__textHeader {
     color: var(--text-color);
@@ -29,14 +42,17 @@
     line-height: 22px;
     text-align: start;
     margin-top: 35px;
+    @include tablet {
+      display: none;
+    }
   }
   &__form {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    min-width: 400px;
-    width: 20vw;
     z-index: 10;
+    @include small-laptop {
+      max-width: 596px;
+    }
   }
   &__formError {
     color: #e83b3b;
@@ -139,6 +155,9 @@
     display: flex;
     gap: 40px;
     align-items: center;
+    @include tablet {
+      flex-direction: column;
+    }
   }
   &__button {
     background-color: #2d76f9;
@@ -178,6 +197,7 @@
     justify-content: space-between;
     max-width: 400px;
     min-width: 200px;
+    width: 70%;
     padding: 8px 12px;
     margin: 0 0 20px 20px;
     display: none;

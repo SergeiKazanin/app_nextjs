@@ -4,9 +4,6 @@
     height: 32px;
     position: relative;
     width: 62px;
-    @include mobile-small {
-      display: none;
-    }
 
     &_active .header__themeSwitcherCircle {
       transform: translateX(30px);

@@ -5,9 +5,94 @@
   position: absolute;
   top: 0;
   transform: translateY(0);
-  transition: transform 0.3s, background-color 0.2s;
+  transition: transform 0.3s, background-color 0.2s, height 0.3s;
+  overflow: hidden;
   z-index: 30;
-
+  @include small-laptop {
+    height: 70px;
+    background-color: #252631;
+    &__menuIsOpen {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      .header {
+        &__navigation {
+          align-items: flex-start;
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 3vh;
+          gap: 5vh;
+          margin-left: 0px;
+          border-bottom: 3px solid;
+          width: 100%;
+          border-color: #2b2d3a;
+          @include tablet {
+            gap: 3vh;
+          }
+        }
+        &__logoLink {
+          display: none;
+        }
+        &__menuSwitcher {
+          display: none;
+        }
+        &__container {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 5vh;
+          justify-content: start;
+          margin: 0 0 0 25px;
+          padding-top: 8vh;
+        }
+        &__link {
+          font-family: Open Sans;
+          font-size: 30px;
+          font-weight: 400;
+          @include tablet {
+            font-size: 18px;
+          }
+        }
+        &__contacts {
+          display: flex;
+        }
+      }
+    }
+  }
+  &__contacts {
+    flex-direction: column;
+    padding-bottom: 2vh;
+    gap: 4vh;
+    display: none;
+    text-align: start;
+    @include tablet {
+      gap: 2vh;
+    }
+  }
+  &__contactsTitle {
+    color: #9aa8ba;
+    font-family: Open Sans;
+    font-size: 30px;
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__contactsList {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    @include tablet {
+      gap: 2vh;
+    }
+  }
+  &__contactsLink {
+    color: #9aa8ba;
+    font-family: Open Sans;
+    font-size: 30px;
+    text-decoration: none;
+    @include tablet {
+      font-size: 18px;
+    }
+  }
   &__scrollDown {
     transform: translateY(-130px);
   }
@@ -23,14 +108,28 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+    position: relative;
     justify-content: space-between;
+    @include small-laptop {
+      width: 90vw;
+    }
   }
   &__navigation {
     display: flex;
     align-items: center;
     gap: 100px;
     margin-left: 30px;
+    > :first-child {
+      display: none;
+      @include small-laptop {
+        display: block;
+      }
+    }
+    @include small-laptop {
+      display: none;
+    }
   }
+
   &__link {
     text-decoration: none;
     cursor: pointer;
@@ -53,6 +152,28 @@
     &:hover::after {
       left: 0;
       width: 100%;
+    }
+  }
+  &__menuSwitcher {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 30px;
+    @include small-laptop {
+      margin-right: 60px;
+    }
+  }
+
+  &__menuSvg {
+    display: none;
+    position: absolute;
+    top: 19px;
+    right: 0px;
+    @include small-laptop {
+      display: block;
+      &Off {
+        display: none;
+      }
     }
   }
 

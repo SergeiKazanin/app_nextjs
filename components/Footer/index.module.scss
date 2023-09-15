@@ -3,6 +3,10 @@
   height: 396px;
   display: flex;
   align-items: center;
+  @include tablet {
+    height: auto;
+    padding: 20px 0 30px 0;
+  }
 
   &__container {
     width: var(--width-container);
@@ -12,6 +16,14 @@
     font-family: Open Sans;
     font-size: 16px;
     line-height: normal;
+    flex-wrap: wrap;
+    @include small-laptop {
+      width: 90vw;
+      row-gap: 60px;
+    }
+    @include tablet {
+      font-size: 13px;
+    }
   }
   &__link {
     text-decoration: none;
@@ -33,6 +45,10 @@
     width: 205px;
     text-align: start;
     gap: 10px;
+    @include tablet {
+      flex-basis: 100%;
+      text-align: center;
+    }
   }
   &__logoSvg {
     &:hover * {
@@ -44,14 +60,32 @@
     & path {
       fill: var(--text-color);
     }
+    width: 196px;
+    height: 42px;
+    @include tablet {
+      width: 102px;
+    }
   }
   &__linkFlex {
     display: flex;
-    gap: 70px;
+    gap: 3vw;
     text-align: start;
-    // :first-child {
-    //   align-items: flex-end;
-    // }
+    @include small-laptop {
+      flex-basis: 60%;
+      gap: 2vw;
+      justify-content: space-between;
+    }
+    @include tablet {
+      flex-basis: 100%;
+      flex-wrap: wrap;
+      row-gap: 20px;
+      column-gap: 20px;
+      justify-content: center;
+      > :first-child {
+        flex-basis: 100%;
+        text-align: center;
+      }
+    }
   }
   &__copyright {
     width: 359px;
@@ -59,5 +93,11 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    @include small-laptop {
+      align-items: center !important;
+      flex-basis: 100% !important;
+      max-width: 100% !important;
+      text-align: center;
+    }
   }
 }

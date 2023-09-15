@@ -2,6 +2,13 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  margin-top: 170px;
+  margin-top: 100px;
   margin-bottom: 150px;
+  @include small-laptop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include tablet {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
 }

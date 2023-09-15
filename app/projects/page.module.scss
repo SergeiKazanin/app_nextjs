@@ -4,6 +4,9 @@
     height: 100%;
     margin: 0 auto;
     text-align: start;
+    @include small-laptop {
+      width: 90vw;
+    }
   }
   &__navElem {
     margin-top: 80px;
