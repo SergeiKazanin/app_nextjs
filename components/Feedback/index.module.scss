@@ -16,7 +16,7 @@
     @include small-laptop {
       width: 90vw;
       flex-direction: column;
-      gap: 25px;
+      gap: 30px;
       margin-top: 58px;
       margin-bottom: 100px;
     }
@@ -28,6 +28,18 @@
     @include small-laptop {
       max-width: 596px;
     }
+    @include tablet {
+      flex-direction: row;
+      gap: 28px;
+    }
+  }
+  &__textGrupSvg {
+    width: 156px;
+    height: 144px;
+    @include tablet {
+      width: 76px;
+      height: 70px;
+    }
   }
   &__textHeader {
     color: var(--text-color);
@@ -35,6 +47,9 @@
     font-size: 38px;
     text-align: start;
     margin-top: 25px;
+    @include tablet {
+      font-size: 24px;
+    }
   }
   &__text {
     font-family: Open Sans;
@@ -60,6 +75,9 @@
     font-size: 16px;
     line-height: 22px;
     margin-top: 8px;
+    @include tablet {
+      font-size: 13px;
+    }
   }
   &__input {
     position: relative;
@@ -105,6 +123,10 @@
     color: var(--text-color);
     font-family: Open Sans;
     font-size: 16px;
+    @include tablet {
+      font-size: 13px;
+      top: 20px;
+    }
   }
   &__labelError {
     color: #e83b3b;

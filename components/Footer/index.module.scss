@@ -23,6 +23,7 @@
     }
     @include tablet {
       font-size: 13px;
+      row-gap: 20px;
     }
   }
   &__link {

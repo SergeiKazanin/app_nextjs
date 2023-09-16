@@ -56,7 +56,7 @@ export const Feedback = () => {
     <div className={style.feedback}>
       <div className={style.feedback__container}>
         <div className={style.feedback__textGrup}>
-          <Grup />
+          <Grup className={style.feedback__textGrupSvg} />
           <h1 className={style.feedback__textHeader}>
             Расскажите <br /> о вашем проекте
           </h1>

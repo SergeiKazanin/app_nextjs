@@ -187,5 +187,11 @@
     & path {
       fill: var(--text-color);
     }
+    width: 131px;
+    height: 28px;
+    @include tablet {
+      width: 93px;
+      height: 19px;
+    }
   }
 }

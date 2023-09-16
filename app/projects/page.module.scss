@@ -10,6 +10,9 @@
   }
   &__navElem {
     margin-top: 80px;
+    @include tablet {
+      margin-top: 39px;
+    }
   }
   &__linkMain {
     color: #c4d2e3;
@@ -30,16 +33,26 @@
     &:hover::after {
       width: 100%;
     }
+    @include tablet {
+      font-size: 12px;
+    }
   }
   &__textHead {
     color: #616580;
     font-family: Rubik;
     font-size: 18px;
+    @include tablet {
+      font-size: 12px;
+    }
   }
   &__HeaderPage {
     color: var(--text-color);
     font-family: RubikMedium;
     font-size: 38px;
     margin-top: 78px;
+    @include tablet {
+      font-size: 21px;
+      margin-top: 42px;
+    }
   }
 }

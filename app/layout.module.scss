@@ -3,6 +3,9 @@
   justify-content: center;
   flex: 1 1 auto;
   margin-top: 110px;
+  @include small-laptop {
+    margin-top: 70px;
+  }
 }
 
 .body {
