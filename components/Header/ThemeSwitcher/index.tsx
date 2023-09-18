@@ -1,27 +1,23 @@
 "use client";
 import cl from "classnames";
 import style from "./index.module.scss";
-import Sun from "../images/sun.svg";
-import Moon from "../images/moon.svg";
+import Sun from "../../../assets/sun.svg";
+import Moon from "../../../assets/moon.svg";
 import { useState } from "react";
 
 export const ThemeSwitcher = () => {
-  const [active, setActive] = useState("");
   const [isActive, setIsActive] = useState(false);
 
   const handleActiveTheme = () => {
-    if (isActive) {
-      setIsActive(false);
-      setActive("");
-    } else {
-      setIsActive(true);
-      setActive(style.header__themeSwitcher_active);
-    }
+    setIsActive((prev) => !prev);
   };
 
   return (
     <div
-      className={cl(style.header__themeSwitcher, active)}
+      className={cl(
+        style.header__themeSwitcher,
+        isActive ? style.header__themeSwitcher_active : ""
+      )}
       onClick={() => handleActiveTheme()}
     >
       <div className={style.header__themeSwitcherRect}>

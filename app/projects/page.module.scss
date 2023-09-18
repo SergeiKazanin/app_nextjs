@@ -16,7 +16,7 @@
   }
   &__linkMain {
     color: #c4d2e3;
-    font-family: Rubik;
+    font-family: var(--font-rubik-regular);
     font-size: 18px;
     text-decoration: none;
     position: relative;
@@ -39,7 +39,7 @@
   }
   &__textHead {
     color: #616580;
-    font-family: Rubik;
+    font-family: var(--font-rubik-regular);
     font-size: 18px;
     @include tablet {
       font-size: 12px;
@@ -47,7 +47,7 @@
   }
   &__HeaderPage {
     color: var(--text-color);
-    font-family: RubikMedium;
+    font-family: var(--font--rubik-medium);
     font-size: 38px;
     margin-top: 78px;
     @include tablet {

@@ -1,7 +1,6 @@
 import "./styles/vars.css";
 import "./styles/reset.css";
 import "./styles/index.css";
-import "./styles/fonts.css";
 
 import style from "./layout.module.scss";
 import type { Metadata } from "next";
@@ -14,6 +13,9 @@ export const metadata: Metadata = {
   title: "Cyberia",
   description: "Cyberia web",
 };
+import React from "react";
+import cl from "classnames";
+import { rubikMedium, open_sans, rubikRegular } from "@/fonts";
 
 export default function RootLayout({
   children,
@@ -22,7 +24,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={style.body}>
+      <body
+        className={cl(
+          style.body,
+          open_sans.variable,
+          rubikMedium.variable,
+          rubikRegular.variable
+        )}
+      >
         <Header />
         <main className={style.layout}>{children}</main>
         <Feedback />

@@ -43,7 +43,7 @@
   }
   &__textHeader {
     color: var(--text-color);
-    font-family: RubikMedium;
+    font-family: var(--font--rubik-medium);
     font-size: 38px;
     text-align: start;
     margin-top: 25px;
@@ -52,7 +52,7 @@
     }
   }
   &__text {
-    font-family: Open Sans;
+    font-family: var(--font-open-sans);
     font-size: 16px;
     line-height: 22px;
     text-align: start;
@@ -71,7 +71,7 @@
   }
   &__formError {
     color: #e83b3b;
-    font-family: Open Sans;
+    font-family: var(--font-open-sans);
     font-size: 16px;
     line-height: 22px;
     margin-top: 8px;
@@ -92,7 +92,7 @@
     transition: border-color 0.2s;
     background-color: transparent;
     line-height: 22px;
-    font-family: Open Sans;
+    font-family: var(--font-open-sans);
     font-size: 16px;
     color: var(--text-color);
     width: calc(100% - 10px);
@@ -121,7 +121,7 @@
     top: 17px;
     transition: all 0.3s ease;
     color: var(--text-color);
-    font-family: Open Sans;
+    font-family: var(--font-open-sans);
     font-size: 16px;
     @include tablet {
       font-size: 13px;
@@ -145,7 +145,7 @@
     background-color: transparent;
     border: none;
     border-radius: inherit;
-    font-family: Open Sans;
+    font-family: var(--font-open-sans);
     font-size: 16px;
     height: 70px !important;
     line-height: 22px;
@@ -186,7 +186,7 @@
     border-radius: 35px;
     border: none;
     color: #fff;
-    font-family: Open Sans;
+    font-family: var(--font-open-sans);
     padding: 20px 50px;
     text-transform: uppercase;
     cursor: pointer;
@@ -197,7 +197,7 @@
   }
   &__desc {
     color: var(--text-color);
-    font-family: Open Sans;
+    font-family: var(--font-open-sans);
     font-size: 16px;
     line-height: 22px;
     text-align: start;
@@ -232,13 +232,13 @@
     max-width: 200px;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-family: Open Sans;
+    font-family: var(--font-open-sans);
     font-size: 16px;
     height: 100%;
   }
   &__fileSize {
     color: var(--text-color);
-    font-family: Open Sans;
+    font-family: var(--font-open-sans);
     font-size: 16px;
   }
   &__cancelSvg {
@@ -248,14 +248,14 @@
   }
   &__feedOk {
     color: #8fd97d;
-    font-family: Open Sans;
+    font-family: var(--font-open-sans);
     font-size: 18px;
     line-height: 22px;
     display: none;
   }
   &__feedNot {
     color: #e83b3b;
-    font-family: Open Sans;
+    font-family: var(--font-open-sans);
     font-size: 18px;
     line-height: 22px;
     display: none;

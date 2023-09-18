@@ -3,7 +3,7 @@ import { getAllProjects } from "@/service/api";
 import style from "./index.module.scss";
 import useSWR from "swr";
 import { Projects } from "@/models/models";
-import { ProjectCard } from "../ProgectCard";
+import { ProjectCard } from "../ProjectCard";
 import { useSearch } from "@/service/store";
 
 export default function ProjectsList() {
@@ -20,7 +20,7 @@ export default function ProjectsList() {
     }
     for (let i = 0; i < projects.items.length; i++) {
       for (let j = 0; j < projects.items[i].categories?.length; j++)
-        if (projects.items[i].categories[j].name === filterValues) {
+        if (projects.items[i].categories[j].id.toString() === filterValues) {
           outProjects.items.push(projects.items[i]);
         }
     }

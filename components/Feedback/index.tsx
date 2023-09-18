@@ -1,13 +1,14 @@
 "use client";
 import style from "./index.module.scss";
-import Grup from "./images/Group 1347.svg";
-import Paper from "./images/Paperclip.svg";
-import Cancel from "./images/Cancel.svg";
+import Grup from "../../assets/Group 1347.svg";
+import Paper from "../../assets/Paperclip.svg";
+import Cancel from "../../assets/CancelFeed.svg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import cl from "classnames";
 import { useRef, useState } from "react";
 import { Values } from "@/models/models";
+import React from "react";
 
 import { sendFeedback } from "@/service/api";
 
@@ -43,7 +44,6 @@ export const Feedback = () => {
       } else if (resp.status === 422) {
         setShowNotFeed(style.feedback__feedShow);
       }
-      console.log(await resp.json());
     },
   });
   const handleChangeFile = async (e: React.ChangeEvent<HTMLInputElement>) => {

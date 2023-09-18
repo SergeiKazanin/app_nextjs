@@ -20,7 +20,7 @@
     z-index: 4;
   }
   &__title {
-    font-family: RubikMedium;
+    font-family: var(--font--rubik-medium);
     font-size: 28px;
     color: #fff;
     margin-bottom: 10px;
@@ -33,7 +33,7 @@
   }
   &__description {
     color: #fff;
-    font-family: Open Sans;
+    font-family: var(--font-open-sans);
     font-size: 16px;
     line-height: 22px;
     margin-left: 29px;

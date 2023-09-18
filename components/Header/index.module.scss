@@ -45,7 +45,7 @@
           padding-top: 8vh;
         }
         &__link {
-          font-family: Open Sans;
+          font-family: var(--font-open-sans);
           font-size: 30px;
           font-weight: 400;
           @include tablet {
@@ -70,7 +70,7 @@
   }
   &__contactsTitle {
     color: #9aa8ba;
-    font-family: Open Sans;
+    font-family: var(--font-open-sans);
     font-size: 30px;
     @include tablet {
       font-size: 18px;
@@ -86,7 +86,7 @@
   }
   &__contactsLink {
     color: #9aa8ba;
-    font-family: Open Sans;
+    font-family: var(--font-open-sans);
     font-size: 30px;
     text-decoration: none;
     @include tablet {
@@ -134,7 +134,7 @@
     text-decoration: none;
     cursor: pointer;
     color: var(--text-color);
-    font-family: Rubik;
+    font-family: var(--font-rubik-regular);
     font-size: 18px;
     line-height: normal;
     position: relative;

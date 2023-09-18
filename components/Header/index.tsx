@@ -2,9 +2,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import style from "./index.module.scss";
 
-import Logo from "./images/logo.svg";
-import Menu from "./images/Menu.svg";
-import Close from "./images/Close.svg";
+import Logo from "../../assets/logoHeader.svg";
+import Menu from "../../assets/Menu.svg";
+import Close from "../../assets/Close.svg";
 
 import Link from "next/link";
 import { ThemeSwitcher } from "./ThemeSwitcher";
@@ -33,7 +33,7 @@ export const Header = () => {
       }
     }
     prevScroll.current = scroll;
-  }, [scroll]);
+  }, [isOpen, scroll]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -42,7 +42,7 @@ export const Header = () => {
 
   const handleClickLink = () => {
     if (isOpen) {
-      setIsOpen(false);
+      setIsOpen((prev) => !prev);
     }
   };
 
@@ -126,7 +126,7 @@ export const Header = () => {
         </div>
         <Menu
           onClick={() => {
-            isOpen ? setIsOpen(false) : setIsOpen(true);
+            setIsOpen((prev) => !prev);
           }}
           className={cl(
             style.header__menuSvg,
@@ -135,7 +135,7 @@ export const Header = () => {
         />
         <Close
           onClick={() => {
-            isOpen ? setIsOpen(false) : setIsOpen(true);
+            setIsOpen((prev) => !prev);
           }}
           className={cl(
             style.header__menuSvg,

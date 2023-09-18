@@ -1,9 +1,8 @@
 import { Project } from "@/models/models";
 import style from "./index.module.scss";
 import Link from "next/link";
-import Image from "next/image";
 
-import Group from "./images/Group 1207.svg";
+import Group from "../../../assets/Group 1207.svg";
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   return (
