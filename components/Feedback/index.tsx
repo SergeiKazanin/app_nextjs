@@ -7,7 +7,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import cl from "classnames";
 import { useRef, useState } from "react";
-import { FormErrors, Values, Errors } from "@/models/models";
+import { FormErrors, Values } from "@/models/models";
 import React from "react";
 
 import { sendFeedback } from "@/service/api";
