@@ -34,3 +34,13 @@ export interface Values {
 export interface CategoriesSearch {
   items: Category[];
 }
+
+export interface FormErrors {
+  message: string;
+  errors: Errors;
+}
+
+export interface Errors {
+  phone: string[];
+  attachment: string[];
+}

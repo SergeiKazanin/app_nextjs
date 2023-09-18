@@ -21,7 +21,7 @@
       margin-bottom: 100px;
     }
   }
-  &__textGrup {
+  &__textGroup {
     display: flex;
     flex-direction: column;
     max-width: 455px;
@@ -33,7 +33,7 @@
       gap: 28px;
     }
   }
-  &__textGrupSvg {
+  &__textGroupSvg {
     width: 156px;
     height: 144px;
     @include tablet {

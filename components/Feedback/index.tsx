@@ -1,13 +1,13 @@
 "use client";
 import style from "./index.module.scss";
-import Grup from "../../assets/Group 1347.svg";
+import Group from "../../assets/Group 1347.svg";
 import Paper from "../../assets/Paperclip.svg";
 import Cancel from "../../assets/CancelFeed.svg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import cl from "classnames";
 import { useRef, useState } from "react";
-import { Values } from "@/models/models";
+import { FormErrors, Values, Errors } from "@/models/models";
 import React from "react";
 
 import { sendFeedback } from "@/service/api";
@@ -16,6 +16,7 @@ export const Feedback = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [showOkFeed, setShowOkFeed] = useState("");
   const [showNotFeed, setShowNotFeed] = useState("");
+  const errorRef = useRef<HTMLDivElement>(null);
 
   const formik = useFormik<Values>({
     initialValues: {
@@ -39,8 +40,21 @@ export const Feedback = () => {
         formData.append("attachment", values.attachment);
       }
       const resp = await sendFeedback(formData);
+      const respData: FormErrors = await resp.json();
+      console.log(respData);
       if (resp.ok) {
-        setShowOkFeed(style.feedback__feedShow);
+        if (respData.message === "Feedback accepted.") {
+          setShowOkFeed(style.feedback__feedShow);
+        } else if (respData.message === "Validation errors") {
+          if (errorRef.current) {
+            const errors = Object.values(respData.errors);
+            console.log(errors);
+            errorRef.current.innerHTML = errors
+              .map((error) => error[0])
+              .join("<br/>");
+            setShowNotFeed(style.feedback__feedShow);
+          }
+        }
       } else if (resp.status === 422) {
         setShowNotFeed(style.feedback__feedShow);
       }
@@ -55,8 +69,8 @@ export const Feedback = () => {
   return (
     <div className={style.feedback}>
       <div className={style.feedback__container}>
-        <div className={style.feedback__textGrup}>
-          <Grup className={style.feedback__textGrupSvg} />
+        <div className={style.feedback__textGroup}>
+          <Group className={style.feedback__textGroupSvg} />
           <h1 className={style.feedback__textHeader}>
             Расскажите <br /> о вашем проекте
           </h1>
@@ -200,7 +214,10 @@ export const Feedback = () => {
           <div className={cl(style.feedback__feedOk, showOkFeed)}>
             Ваша заявка успешно отправлена
           </div>
-          <div className={cl(style.feedback__feedNot, showNotFeed)}>
+          <div
+            ref={errorRef}
+            className={cl(style.feedback__feedNot, showNotFeed)}
+          >
             Не удалось отрпавить заявку, повторите отправку позднее
           </div>
         </form>
