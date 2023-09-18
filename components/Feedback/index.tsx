@@ -41,14 +41,12 @@ export const Feedback = () => {
       }
       const resp = await sendFeedback(formData);
       const respData: FormErrors = await resp.json();
-      console.log(respData);
       if (resp.ok) {
         if (respData.message === "Feedback accepted.") {
           setShowOkFeed(style.feedback__feedShow);
         } else if (respData.message === "Validation errors") {
           if (errorRef.current) {
             const errors = Object.values(respData.errors);
-            console.log(errors);
             errorRef.current.innerHTML = errors
               .map((error) => error[0])
               .join("<br/>");
